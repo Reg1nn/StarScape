@@ -10,7 +10,7 @@ import java.awt.event.MouseListener;
 //This Class will take care of checking the User Mouse Input
 //On the Space UI, eg. Placing a Star at a certain Location.
 //It serves the Projection Window to detect where a User Clicked
-@Service
+
 public class TelescopeControls implements MouseListener
 {
 

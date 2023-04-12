@@ -9,31 +9,26 @@ import java.awt.*;
 
 @SpringBootApplication
 public class Main {
-	
-	private Terminal t;
 
 	public static void main(String[] args)
 	{
+
+
 
 		/**Detects the Screens Dimensions on Startup */
 		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
 		int width = gd.getDisplayMode().getWidth(); //TODO: -> Optimize for Multiscreen-Setups
 		int height = gd.getDisplayMode().getHeight();
 
-		System.out.println(width+" "+height);
-
-
-
-		ProjectionWindow w = new ProjectionWindow(width, height);
-
-
-
-		//Run SpringBoot
 		SpringApplication.run(Main.class, args);
 
+		System.out.println(width+" "+height);
 
-
-
+		ProjectionWindow w;
+		w = new ProjectionWindow(width, height);
+		Terminal t;
+		t = new Terminal(w, w.GetInput(), w.GetLog());
+		w.SetTerminal(t);
 	}
 
 }
