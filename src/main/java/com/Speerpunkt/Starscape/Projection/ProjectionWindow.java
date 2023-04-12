@@ -13,6 +13,7 @@ import javax.swing.text.StyledDocument;
 
 import com.Speerpunkt.Starscape.Command.Terminal;
 import com.Speerpunkt.Starscape.DataStorage.LocalProjectionStorage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 //This class will project the Data onto the Screen.
@@ -20,7 +21,6 @@ import org.springframework.stereotype.Component;
 //When an Input is detected the Projection reads the Mouse Position off the Screen
 //MouseClicks will draw the Saved Element on Screen
 
-@Component
 public class ProjectionWindow
 {
 

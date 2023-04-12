@@ -9,6 +9,7 @@ import java.awt.event.MouseListener;
 import javax.swing.JTextPane;
 
 import com.Speerpunkt.Starscape.Projection.ProjectionWindow;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 //09.04.2023
@@ -19,7 +20,6 @@ import org.springframework.stereotype.Service;
 //TODO: It will implement the security layer at a later point
 //
 
-@Service
 public class Terminal implements MouseListener, KeyListener
 {
 
